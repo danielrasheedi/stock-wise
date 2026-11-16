@@ -49,3 +49,10 @@ app.*.map.json
 .env.*
 .vercel
 .flutter-sdk/
+
+# Firebase keys, kept out of the repository
+firebase_keys.json
+android/app/google-services.json
+
+.vercel
+.env*

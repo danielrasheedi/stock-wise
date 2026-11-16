@@ -16,7 +16,9 @@ Live: https://stockwisemy.vercel.app
 
 ```
 flutter pub get
-flutter run -d chrome
+flutter run -d chrome --dart-define-from-file=firebase_keys.json
 ```
+
+The Firebase API keys are not in this repo either. Copy `firebase_keys.example.json` to `firebase_keys.json` and fill in the keys from the Firebase console. For Android builds, also download `google-services.json` from the console into `android/app/`. On Vercel, the web key comes from the `FIREBASE_WEB_API_KEY` environment variable.
 
 The exchange-rate API key is not in this repo. The app gets rates from the site's `/api/rates` function (`api/rates.js`), which reads the key from the `EXCHANGE_RATE_API_KEY` environment variable on Vercel.

@@ -4,6 +4,9 @@ import 'package:flutter/foundation.dart'
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
+/// The API keys are not stored in the repository. They are passed in at build
+/// time with --dart-define, or locally with --dart-define-from-file=firebase_keys.json.
+///
 /// Example:
 /// ```dart
 /// import 'firebase_options.dart';
@@ -48,7 +51,7 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCGpBBFBGg3zO42tFwXUWBlwZcsXtpGD-I',
+    apiKey: String.fromEnvironment('FIREBASE_WEB_API_KEY'),
     appId: '1:355050306937:web:2f3a8e4e11521599b443a8',
     messagingSenderId: '355050306937',
     projectId: 'stock-wise-5aaa0',
@@ -57,7 +60,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyD9PwOjTI8K_v4Vp4MF81HvHGoTECIKHBM',
+    apiKey: String.fromEnvironment('FIREBASE_ANDROID_API_KEY'),
     appId: '1:355050306937:android:8401bee78ed8fd98b443a8',
     messagingSenderId: '355050306937',
     projectId: 'stock-wise-5aaa0',
