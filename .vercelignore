@@ -1,0 +1,8 @@
+.env
+.env.*
+build
+.dart_tool
+.flutter-sdk
+.idea
+android
+*.iml
